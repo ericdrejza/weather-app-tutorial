@@ -12,7 +12,7 @@ window.addEventListener('load', ()=> {
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      const api_key = "d95ef712e9bf629ccf65039ef3b398c5";
+      const api_key = config.OPEN_WEATHER_KEY;
       const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${api_key}`;
 
       fetch(api)
@@ -28,12 +28,16 @@ window.addEventListener('load', ()=> {
           temperatureDegree.textContent = temp;
           temperatureDescription.textContent = weather.description;
           locationTimezone.textContent = data.name;
+
+          //Set Icon
+          setIcons()
         });
     });    
   }
   
   function setIcons(icon, iconID){
-    const skycons = new Skycon
+    const skycons = new Skycons({color: "white"});
+    // const currentIcon
   }
 
-})
+});
