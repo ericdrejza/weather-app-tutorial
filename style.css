@@ -22,9 +22,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.location-timezone {
-  padding-right: 100%;
-}
+
 .temperature {
   flex-direction: column;
 }
