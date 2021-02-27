@@ -33,7 +33,6 @@ window.addEventListener('load', ()=> {
         
         weatherDescription = weatherWords.join(" ");
 
-
         // Set DOM Elements from the API
         temperatureDegree.textContent = temp+String.fromCharCode(0x00B0);
         temperatureDescription.textContent = weatherDescription;
